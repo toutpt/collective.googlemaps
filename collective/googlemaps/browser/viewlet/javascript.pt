@@ -1,1 +1,0 @@
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=googleearth&sensor=false" tal:attributes="src view/src"></script>
