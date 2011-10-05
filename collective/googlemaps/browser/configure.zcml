@@ -4,5 +4,12 @@
     i18n_domain="collective.googlemaps">
 
   <include package=".viewlet"/>
+  <include package="Products.CMFCore" file="permissions.zcml"/>
+  <browser:page
+    name="googlemaps-javascript-controlpanel"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    permission="cmf.ManagePortal"
+    class=".controlpanel.JavascriptControlPanelView"
+    />
 
 </configure>
