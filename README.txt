@@ -3,7 +3,14 @@ Introduction
 
 Integration of GoogleMaps_ javascript API into Plone
 
+Features:
 
+* load google maps javascript api into to your pages
+* use any libraries you want from the controlpanel (googleearth, ...)
+* support for multi languages
+* choose the version of the api you want from the controlpanel
+* activate/unactivate sensor from the controlpanel
+* set asynchronous mode throw the use of a callback
 
 How to install
 ==============

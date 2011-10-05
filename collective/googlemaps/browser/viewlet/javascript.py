@@ -1,5 +1,4 @@
 from plone.app.layout.viewlets import common
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.registry.interfaces import IRegistry
 from zope import component
 from collective.googlemaps import interfaces
@@ -69,4 +68,4 @@ class JavascriptViewlet(common.ViewletBase):
                                               name=u'plone_portal_state')
             self._lang = state.language()
         return self._lang
-    
+
