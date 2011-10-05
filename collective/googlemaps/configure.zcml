@@ -2,10 +2,20 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="collective.googlemaps">
 
   <five:registerPackage package="." initialize=".initialize" />
 
   <!-- -*- extra stuff goes here -*- -->
-  
+  <include package=".browser"/>
+
+  <genericsetup:registerProfile
+      name="default"
+      title="collective.googlemaps default"
+      directory="profiles/default"
+      description='Install collective.googlemaps in Plone'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+  />
+
 </configure>

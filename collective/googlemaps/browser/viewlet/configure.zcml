@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.googlemaps">
+
+  <browser:viewlet
+      name="collective.googlemaps.javascript"
+      for="*"
+      class=".javascript.JavascriptViewlet"
+      manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+      layer="collective.googlemaps.interfaces.IGoogleMapsLayer"
+      permission="zope2.View"
+  />
+
+</configure>

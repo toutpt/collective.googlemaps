@@ -25,7 +25,6 @@ setup(name='collective.googlemaps',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'collective.googleloader',
           # -*- Extra requirements: -*-
       ],
       entry_points="""

@@ -1,0 +1,3 @@
+<registry>
+  <records interface="collective.googlemaps.interfaces.JavascriptLoadingConfiguration"/>
+</registry>
