@@ -28,11 +28,12 @@ class JavascriptViewlet(common.ViewletBase):
         super(JavascriptViewlet, self).__init__(context, request, view,
                                                 manager=manager)
         self._param = None
+        self._lang = None
 
     def index(self):
         if 'callback' in self.param():
-            return ASYNC_SCRIPT%(self.url())
-        return SCRIPT%(self.url())
+            return ASYNC_SCRIPT%(self.src())
+        return SCRIPT%(self.src())
     
     def protocol(self):
         #TODO: get it from self.request
@@ -43,6 +44,7 @@ class JavascriptViewlet(common.ViewletBase):
             config = self.configuration()
             param = {}
             param['v'] = config.version
+            param['language'] = self.language()
             param['sensor'] = 'false'
             if config.sensor:
                 param['sensor'] = 'true'
@@ -61,3 +63,10 @@ class JavascriptViewlet(common.ViewletBase):
         param = self.param()
         return protocol + BASE + param
 
+    def language(self):
+        if self._lang is None:
+            state = component.getMultiAdapter((self.context, self.request),
+                                              name=u'plone_portal_state')
+            self._lang = state.language()
+        return self._lang
+    
